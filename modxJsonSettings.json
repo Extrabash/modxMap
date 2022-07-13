@@ -1,0 +1,97 @@
+/* Настройки для migx */
+
+/* 
+  Добавить поля tv:
+  map_city - Город - Предзаполнные города для выбора в map_migx - список(множественный выбор) - Москва||Самара||Минск||Киев
+  map_country - Страна - список(множественный выбор) - Россия||Беларусь||Украина
+  map_dealer_type - Тип дилера - список(множественный выбор) - интернет-магазин||модельный магазин||хобби центр
+  map_geocode - Метка на карте - yandexcoordstv !!! Необходимо установить и настроить https://modstore.pro/packages/maps/yandexcoordstv
+  map_product_type - тип продукта - список(множественный выбор) - кисти||средства ухода||дополнения для диорам
+*/
+
+/* И собственно основной map_migx - тип ввода migx */
+
+/* Вкладки формы: */
+
+[{
+    "caption": "Дилер",
+    "fields": [
+        {
+        "field": "map_country",
+        "caption": "Страна",
+        "inputTV": "map_country"
+        },{
+        "field": "map_city",
+        "caption": "Город",
+        "inputTV": "map_city"
+        },{
+        "field": "title",
+        "caption": "Название"
+        },{
+        "field": "address",
+        "caption": "Адрес"
+        },{
+        "field": "map_geocode",
+        "caption": "Метка на карте",
+        "inputTV": "map_geocode"
+        },{
+        "field": "text",
+        "caption": "Описание",
+        "inputTVtype": "textarea"
+        },{
+        "field": "map_dealer_type",
+        "caption": "Тип дилера",
+        "inputTV": "map_dealer_type"
+        },{
+        "field": "map_product_type",
+        "caption": "Вид продукции",
+        "inputTV": "map_product_type"
+        },{
+        "field": "phone",
+        "caption": "телефон"
+        },{
+        "field": "site",
+        "caption": "сайт"
+        },{
+        "field": "email",
+        "caption": "e-mail"
+        },{
+        "field": "vk",
+        "caption": "ссылка vk"
+        },{
+        "field": "facebook",
+        "caption": "ссылка facebook"
+        },{
+        "field": "telegram",
+        "caption": "ссылка telegram"
+        },{
+        "field": "active",
+        "caption": "Отображать на сайте?",
+        "inputTVtype": "listbox",
+        "inputOptionValues": "Да==1||Нет==0"
+        }]
+    }]
+
+/* Разметка колонок: */
+
+[{
+    "dataIndex": "title",
+    "header": "Заголовок",
+    "sortable": "true",
+    "width": "200"
+    },{
+    "dataIndex": "map_country",
+    "header": "Страна",
+    "sortable": "true",
+    "width": "200"
+    },{
+    "dataIndex": "map_city",
+    "header": "Город",
+    "sortable": "true",
+    "width": "200"
+    },{
+    "dataIndex": "active",
+    "header": "Отображать на сайте?",
+    "sortable": "false",
+    "width": "200"
+    }]
