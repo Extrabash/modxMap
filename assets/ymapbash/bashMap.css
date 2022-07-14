@@ -1,0 +1,107 @@
+.superMap {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-areas:
+        "g1 g3";
+    grid-template-columns: 2fr 5fr;
+}
+
+.mapLeft {
+    grid-area: g1;
+    position: relative;
+}
+
+.mapSettings {
+    /* grid-area: g1; */
+    padding: 20px 40px 10px 40px;
+}
+
+.mapItems {
+    /* grid-area: g2; */
+    overflow-y: scroll;
+    height: 610px;
+    margin-bottom: 20px;
+    padding: 10px 40px 20px 40px;
+}
+
+#map {
+    grid-area: g3;
+    background: #583e72;
+}
+
+.mapSettings .catalog-settings {
+    margin: 0px;
+}
+
+.mapSettings .filter-bl fieldset {
+    margin: 5px 15px 5px 0;
+}
+
+.mapFullInfo {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 30px 40px;
+    z-index: 19;
+}
+
+.opened .mapFullInfo {
+    display: block;
+}
+
+.mapFullInfo .close {
+    position: absolute;
+    right: 44px;
+    top: 33px;
+    width: 15px;
+    height: 16px;
+    line-height: 17px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mapFullInfo .close:hover {
+    color: #fa582f;
+}
+
+.mapShortInfo {
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.mapTitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mapShortInfo p {
+    margin-bottom: 10px;
+}
+
+.opened .mapFullInfo p {
+    margin-bottom: 13px;
+}
+
+.mapObjContacts {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ededed;
+}
+
+@media (max-width: 770px) {
+    .superMap {
+        grid-template-areas: "g3"
+                             "g1" !important;
+        grid-template-columns: 1fr;
+    }
+    #map {
+        height: 400px;
+    }
+}
